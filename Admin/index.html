@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminstyle.css">
+</head>
+<body>
+    <!--header area start-->
+    <header>
+        <div class="left_area">
+            <h3>Welcome, <span>Admin</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="#" class="logout_btn" onclick="logout()">Logout</a>
+        </div>
+    </header>
+    <!--header area end-->
+
+    <!--sidebar start-->
+    <div class="sidebar">
+        <div class="profile_info">
+            <img src="images/admin.png" class="profile_image" alt="profile">
+            <h4>Jazz</h4>
+        </div>
+        <a href="#dashboard" class="sidebar-link" data-target="dashboard"><img src="images/dashboard.png" alt="dashboard"><span>Dashboard</span></a>
+        <a href="#userids" class="sidebar-link" data-target="userids"><img src="images/face.png" alt="usermanagement"><span>Create IDs</span></a>
+        <a href="#examination" class="sidebar-link" data-target="examination"><img src="images/exam.png" alt="exam"><span>Manage Exam</span></a>
+        <a href="#trainees" class="sidebar-link" data-target="trainees"><img src="images/trainees.png" alt="trainees"><span>Trainees</span></a>
+        <a href="#about" class="sidebar-link" data-target="about"><img src="images/about.png" alt="about"><span>About</span></a>
+        <a href="#settings" class="sidebar-link" data-target="settings"><img src="images/settings.png" alt="settings"><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <!--content areas-->
+    <div class="content" id="dashboard-content">
+        <h1>Welcome to the Hotel Dashboard</h1>
+        <p>This is where you can view summaries of exam subjects, examinees, their scores, and those who passed.</p>
+    </div>
+
+    <div class="content" id="createid-content">
+    </div>
+
+    <div class="content" id="examination-content">
+        <div class="card-container">
+            <a href="#" class="examination-content__card">
+                <h2>Hospitality Management</h2>
+                <p>This exam covers the fundamentals of hotel operations.</p>
+            </a>
+            <a href="#" class="examination-content__card">
+                <h2>Food and Beverage Management</h2>
+                <p>This exam tests your knowledge on food service and beverage operations.</p>
+            </a>
+            <a href="#" class="examination-content__card">
+                <h2>Hotel Marketing and Sales</h2>
+                <p>This exam covers marketing strategies and sales techniques used in the hospitality industry.</p>
+            </a>
+            <a href="#" class="examination-content__card">
+                <h2>Event Management</h2>
+                <p>This exam assesses your skills in planning and executing events.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="content" id="trainees-content">
+        <h1>Trainees</h1>
+        <p>Here you can find information about trainees and seminars.</p>
+    </div>
+    <div class="content" id="about-content">
+        <h1>About</h1>
+        <p>This section provides information about the page.</p>
+    </div>
+    <div class="content" id="settings-content">
+        <h1>Settings</h1>
+        <p>This section provides guides for using the page.</p>
+    </div>
+    <!--content areas end-->
+
+    <!-- for logout -->
+    <script>
+    function logout() {
+        var confirmLogout = confirm("Are you sure you want to logout?");
+        if (confirmLogout) {
+            window.location.href = '../login-ui.php';
+        }
+    }
+    </script>
+
+  
+<!-- For Sidebar clicking contents -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const sidebarLinks = document.querySelectorAll('.sidebar-link');
+      sidebarLinks.forEach(function(link) {
+          link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const targetId = this.getAttribute('data-target');
+              const contentAreas = document.querySelectorAll('.content');
+              contentAreas.forEach(function(area) {
+                  area.style.display = 'none';
+              });
+              if (targetId === 'userids') {
+                  window.location.href = 'table.php';
+              } else {
+                  document.getElementById(targetId + '-content').style.display = 'block';
+              }
+          });
+      });
+  });
+</script>
+  </body>
+</html>

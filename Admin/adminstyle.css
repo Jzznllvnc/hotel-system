@@ -1,0 +1,166 @@
+body {
+  background-color: rgb(212, 212, 212);
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-y: hidden;
+}
+
+/* Header & Logout */
+header {
+  z-index: 1;
+  position: fixed;
+  background: #161616;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 30px;
+}
+
+.left_area h3 {
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #66fcf1;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #45a29e;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.logout_btn:hover {
+  background: #004b46;
+}
+/* End of Header & Logout */
+
+/* Sidebar */
+a[href="#dashboard"] img,
+a[href="#userids"] img,
+a[href="#examination"] img,
+a[href="#trainees"] img,
+a[href="#about"] img,
+a[href="#settings"] img {
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.sidebar {
+  z-index: 1;
+  top: 70px;
+  background: #1a1a1d;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 70px);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile_info .profile_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile_info h4 {
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  font-style: bold;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a span {
+  padding-top: 20px;
+}
+
+.sidebar a:hover {
+  background: #303036;
+  
+}
+
+/* End of Sidebar */
+
+.content {
+  display: none;
+  margin-left: 250px;
+  padding: 20px;
+  padding-top: 70px;
+  z-index: 0;
+}
+
+/* Exams content */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 50px;
+  width: 100%;
+  height: 650px;
+}
+
+.examination-content__card {
+  background-color: #fff;
+  color: #252525;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s;
+  width: calc(33% - 10px);
+  display: inline-block;
+  margin-top: 40px;
+  
+}
+
+
+.examination-content__card:hover {
+  box-shadow: 0 5px 10px rgba(0, 255, 234, 0.2);
+}
+
+.examination-content__card h2 {
+  color: #252525;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+/* End of Exam content*/

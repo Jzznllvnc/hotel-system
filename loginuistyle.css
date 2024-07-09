@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('images/geometry.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: rgba(255, 255, 255, 0.616) 0px 30px 90px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+}
+
+.forgot-password {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.forgot-password:hover {
+    color: #a8a8a8;
+}
+
+#chk {
+    display: none;
+}
+
+.login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.login label {
+    margin: 10% 0 5%;
+}
+
+label {
+    color: #ffffff;
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    background: #e0dede;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.login-button {
+    width: 70%;
+    height: 40px;
+    margin: 15px auto 10%;
+    color: #fff;
+    background: #45a29e;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.login-button:hover {
+    background-color: #004b46;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    background-color: #ffe6e6;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 165px;
+}
+
+.form .error {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
